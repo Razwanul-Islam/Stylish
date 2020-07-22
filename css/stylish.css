@@ -116,7 +116,14 @@
 .nav-row-2 .s-row ul li a,
 .nav .nav-list-left li a,
 .nav .nav-list-right li a {
-  font-size: smaller;
+  font-size: 0.7rem;
+  text-decoration: none;
+  color: var(--light);
+}
+.nav-row-2 .s-row ul li a:hover,
+.nav .nav-list-left li :hover,
+.nav .nav-list-right li a :hover{
+  font-size: 0.72rem;
   text-decoration: none;
   color: white;
 }
@@ -140,6 +147,11 @@
   display: none;
 }
 @media (max-width: 500px) {
+  body{width:100vw}
+  .nav-row-2 .f-row .search-form .form-control {
+    min-width: 50px;
+    width:6rem;
+  }
   .toggle {
     display: inline-flex;
     margin-bottom: 2px;
@@ -186,7 +198,7 @@
     background: var(--purple-pink);
   }
   .nav-row-2 .s-row .collapse li {
-    font-size: smaller;
+    font-size: 0.7rem;
     text-align: center;
     margin: 0px;
     width: 250px;
