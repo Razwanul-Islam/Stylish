@@ -44,6 +44,12 @@
 .bg-purple-pink {
   background: var(--purple-pink);
 }
+.bg-purple-blue{
+  background: var(--purple-blue);
+}
+.bg-wood{
+  background: url(../assets/wood.png);
+}
 .nav {
   padding: 10px;
   display: flex;
@@ -161,15 +167,15 @@
     box-shadow: none;
   }
 
-  .nav-row-2 .s-row .collapse {
+  .nav-row-2 .s-row .collapsed {
     flex-direction: column;
     flex-wrap: wrap;
     position: absolute;
     left: -250px;
     top: 88px;
     padding: 0px;
-    height: 100%;
-    box-shadow: 0px 0px 3px rgb(177, 177, 177);
+    min-height: 100%;
+    box-shadow: 0px 3px 3px rgb(177, 177, 177);
     /* width: 250px; */
   }
   .nav-row-2 .s-row .bgc-primary {
@@ -197,7 +203,7 @@
   .nav-row-2 .s-row .bgc-purple-pink {
     background: var(--purple-pink);
   }
-  .nav-row-2 .s-row .collapse li {
+  .nav-row-2 .s-row .collapsed li {
     font-size: 0.7rem;
     text-align: center;
     margin: 0px;
@@ -206,7 +212,7 @@
     padding-left: 5px;
     padding-right: 5px;
   }
-  .nav-row-2 .s-row .collapse li:hover {
+  .nav-row-2 .s-row .collapsed li:hover {
     background-color: #ffffff5e;
   }
 }

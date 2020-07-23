@@ -8,10 +8,42 @@
     <link rel="stylesheet" href="../css/stylish.css" />
     <script src="../js/jquery-min.js"></script>
     <script src="../js/stylish.js"></script>
+    <script src='../js/bootstrap.js'></script>
   </head>
   <body>
+
+
+    <!-- nav example 0.1 -->
+    <h2 class="mt-3">Default bootstrap nav-bar</h2>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <a class="navbar-brand" href="#">Hidden brand</a>
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+
+
+
     <!-- <--nav sample 1> -->
-    <nav class="nav nav-row-2 bg-dark">
+      <h2 class="mt-3">Stylish nav-bar</h2>
+    <nav class="nav nav-row-2 bg-purple-blue">
       <div class="f-row">
         <span class="brand">Navbar</span>
         <div class="search-form">
@@ -24,7 +56,7 @@
         <button aria-label="toggle" class="btn toggle">
           <span class="navbar-toggler-icon">--></span>
         </button>
-        <ul class="nav-list-left collapse">
+        <ul class="nav-list-left collapsed">
           <li><a href="">Home</a></li>
           <li><a href="">About</a></li>
           <li><a href="">Blog</a></li>
@@ -33,20 +65,28 @@
       </div>
     </nav>
 
+
+
+    
     <!-- nav type 2 -->
 
     <nav class="nav bg-primary mt-4">
       <div class="nav-row">
         <span class="brand">Navbar</span>
-        <ul class="nav-list-left">
+        <ul class="nav-list-left" id='navbarTogglerDemo01'>
           <li><a href="">Home</a></li>
           <li><a href="">About</a></li>
           <li><a href="">Blog</a></li>
           <li><a href="">Contact</a></li>
         </ul>
+        <ul class="nav-list-right">
+            <!-- you can add another list here for right side -->
+        </ul> 
+        
+      
       </div>
     </nav>
-
+    
     <nav class="nav bg-success mt-3">
       <div class="nav-row">
         <span class="brand">Navbar</span>
@@ -58,7 +98,7 @@
         </ul>
       </div>
     </nav>
-
+  
     <nav class="nav bg-danger mt-3">
       <div class="nav-row">
         <span class="brand">Navbar</span>
@@ -84,6 +124,43 @@
     </nav>
 
     <nav class="nav bg-dark mt-3">
+      <div class="nav-row">
+        <span class="brand">Navbar</span>
+        <ul class="nav-list-left">
+          <li><a href="">Home</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Blog</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <nav class="nav bg-wood mt-3">
+      <div class="nav-row">
+        <span class="brand">Navbar</span>
+        <ul class="nav-list-left">
+          <li><a href="">Home</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Blog</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <nav class="nav bg-purple-blue mt-3">
+      <div class="nav-row">
+        <span class="brand">Navbar</span>
+        <ul class="nav-list-left">
+          <li><a href="">Home</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Blog</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+
+    <nav class="nav bg-purple-pink mt-3">
       <div class="nav-row">
         <span class="brand">Navbar</span>
         <ul class="nav-list-left">
