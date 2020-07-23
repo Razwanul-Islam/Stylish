@@ -6,8 +6,8 @@
 
 
 
-//custom code 
-document.getElementById("alert").addEventListener("click",free);
+//DELLE WARNING BY ERFAN
+document.getElementById("alert-dellete").addEventListener("click",free);
 function free() {
     swal({
         title: "Are you sure?",
@@ -25,4 +25,18 @@ function free() {
           swal("Your imaginary file is safe!");
         }
       });
+  }
+
+  //USER CUSTOMIZE WARNING BY RAZWAN
+
+  document.getElementById("alert-warning").addEventListener("click",free1);
+function free1() {
+    swal({
+        title:$("#alert-title").html(),
+        text: $("#alert-text").html(),
+        icon: "warning",
+        buttons: true,
+        dangerMode: false,
+      })
+      
   }

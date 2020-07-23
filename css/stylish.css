@@ -528,3 +528,11 @@
     background-position: 400%;
   }
 }
+
+
+
+/* alert section */
+
+#alert-title, #alert-text{
+  display: none;
+}
