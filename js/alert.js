@@ -6,7 +6,7 @@
 
 
 
-//DELLE WARNING BY ERFAN
+//DELET WARNING BY ERFAN
 document.getElementById("alert-dellete").addEventListener("click",free);
 function free() {
     swal({
