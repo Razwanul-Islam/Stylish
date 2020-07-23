@@ -547,5 +547,6 @@
 
 }
 .card-body img:hover{
-  background:url("../assets/product-image-hover.png") no-repeat;
+  content:url("../assets/product-image-hover.png");
+  transition: 0.2s;
 }
