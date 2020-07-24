@@ -536,3 +536,17 @@
 #alert-title, #alert-text{
   display: none;
 }
+
+
+/*Cards*/
+.card-body img{
+  width: 250px;
+  height: 250px;
+  margin-bottom: 20px;
+
+
+}
+.card-body img:hover{
+  content:url("../assets/product-image-hover.png");
+  transition: 0.2s;
+}
