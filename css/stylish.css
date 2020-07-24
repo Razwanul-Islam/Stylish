@@ -21,7 +21,7 @@
   --light: #f8f9fa;
   --dark: #343a40;
   --purple-pink: linear-gradient(90deg, var(--purple), #dd3bc8);
-  --purple-blue: linear-gradient(-90deg, #CF77F3 0%, #009BFF 47%, #2AC9DB 100%);;
+  --purple-blue: linear-gradient(-90deg, #cf77f3 0%, #009bff 47%, #2ac9db 100%);
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
@@ -32,6 +32,11 @@
     "Segoe UI Emoji", "Segoe UI Symbol";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
     "Liberation Mono", "Courier New", monospace;
+}
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 .toggle {
   background: none;
@@ -44,10 +49,10 @@
 .bg-purple-pink {
   background: var(--purple-pink);
 }
-.bg-purple-blue{
+.bg-purple-blue {
   background: var(--purple-blue);
 }
-.bg-wood{
+.bg-wood {
   background: url(../assets/wood.png);
 }
 .nav {
@@ -128,7 +133,7 @@
 }
 .nav-row-2 .s-row ul li a:hover,
 .nav .nav-list-left li :hover,
-.nav .nav-list-right li a :hover{
+.nav .nav-list-right li a :hover {
   font-size: 0.72rem;
   text-decoration: none;
   color: white;
@@ -153,10 +158,12 @@
   display: none;
 }
 @media (max-width: 500px) {
-  body{width:100vw}
+  body {
+    width: 100vw;
+  }
   .nav-row-2 .f-row .search-form .form-control {
     min-width: 50px;
-    width:6rem;
+    width: 6rem;
   }
   .toggle {
     display: inline-flex;
@@ -291,7 +298,13 @@
 }
 
 .btn-purple-blue.btn-anim:hover {
-  background: linear-gradient(-90deg, #CF77F3 0%, #009BFF 20%, #2AC9DB 70%,#CF77F3 100%);
+  background: linear-gradient(
+    -90deg,
+    #cf77f3 0%,
+    #009bff 20%,
+    #2ac9db 70%,
+    #cf77f3 100%
+  );
   background-size: 400%;
   animation: btn-anim 6s linear infinite;
 }
@@ -306,7 +319,7 @@
 .btn-purple-blue.disabled,
 .btn-purple-blue:disabled {
   color: #fff;
-  background:var(--purple-blue);
+  background: var(--purple-blue);
   border: none;
 }
 
@@ -394,7 +407,7 @@
   );
   background-size: 400%;
   border: none;
-  
+
   box-shadow: 0 0 0.2rem rgba(138, 33, 124, 0.5);
 }
 
@@ -454,7 +467,7 @@
   );
   background-size: 400%;
   border: none;
-  
+
   box-shadow: 0 0 0.2rem rgba(138, 33, 124, 0.5);
 }
 
@@ -510,14 +523,12 @@
   box-shadow: 0 0 0.2rem #a78928;
 }
 
-
-
-    /* pill button */
+/* pill button */
 
 .btn-pill {
   border-radius: 20px;
-  padding-left:25px;
-  padding-right:25px;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 @keyframes btn-anim {
@@ -529,24 +540,87 @@
   }
 }
 
-
-
 /* alert section */
 
-#alert-title, #alert-text{
+#alert-title,
+#alert-text {
   display: none;
 }
 
-
 /*Cards*/
-.card-body img{
+.card-body img {
   width: 250px;
   height: 250px;
   margin-bottom: 20px;
-
-
 }
-.card-body img:hover{
-  content:url("../assets/product-image-hover.png");
+.card-body img:hover {
+  content: url("../assets/product-image-hover.png");
   transition: 0.2s;
+}
+
+.s-card.flip-book {
+  max-width: 350px;
+  max-height: 900px;
+  max-width: 300px;
+  max-height: 700px;
+  position: relative;
+  border: 1px solid rgb(211, 211, 211);
+  box-shadow: 1px 3px 6px gray;
+  border-radius: 4px;
+  transform: perspective(2000px);
+  transform-origin: left;
+  transition: 1s;
+}
+
+.s-card.flip-book .card-cover {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  transform: perspective(2000px);
+  transform-origin: left;
+  transition: 1s;
+  background-color: rgb(228, 228, 228);
+}
+
+.s-card.flip-book .card-cover img {
+  height: 100%;
+  width: 100%;
+}
+
+.s-card.flip-book:hover {
+  transform: perspective(2000px);
+  transform-origin: left;
+  transition: 1s;
+  transform: rotate(-10deg);
+  box-shadow: 3px 6px 10px rgb(177, 177, 177);
+}
+.s-card.flip-book:hover > .card-cover {
+  transform: perspective(2000px);
+  transform-origin: left;
+  transition: 1s;
+  transform: rotateY(-135deg);
+}
+
+.s-card.flip-book .card-body {
+  height: 100%;
+  width: 100%;
+  background: white;
+  font-family: var(--font-family-sans-serif);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: perspective(2000px);
+  transform-origin: left;
+  transition: 1s;
+  box-shadow: inset 300px 0px 20px grey;
+}
+.s-card.flip-book:hover > .card-body {
+  transform: perspective(2000px);
+  transform-origin: left;
+  transition: 1s;
+  box-shadow: inset 10px -10px 15px rgb(194, 194, 194);
+}
+.s-card.flip-book .card-body .card-text {
+  height: 60%;
 }
